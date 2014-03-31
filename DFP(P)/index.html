@@ -1,7 +1,4 @@
-
 <!DOCTYPE html>
-
-
 <html>
 <head>
     <title>DFP Test</title>
@@ -11,19 +8,7 @@
 <body>
 
 <script src="http://btg.mtvnservices.com/aria/coda.html?site=jokes.cc.com&Ads_DFP=1&Ads=0"></script>
-
-
-
-
-
 <script>
-
-
-
-
-
-
-
     //Toggle auto-firing of ads, ensuring namespaces have been defined without overwriting them.
     if (typeof MTVN == "undefined") MTVN = {};
     if (typeof MTVN.config == "undefined") MTVN.config = {};
@@ -38,56 +23,48 @@
 
     //Define page data
     var vmn_page_data = {
-        "metadata" : {
-            "property"  : "nick",
-            "is_main"   : false
+        "metadata": {
+            "property": "nick",
+            "is_main": false
         },
-        "mappings" : {
-            "ad-unit" : {
-                "1" : "@property",
-                "2" : "shows",
-                "3" : "victorious",
-                "4" : "home"
+        "mappings": {
+            "ad-unit": {
+                "1": "@property",
+                "2": "shows",
+                "3": "victorious",
+                "4": "home"
             },
-            "key-values" : {
-                "foo" : "bar,barB"
+            "key-values": {
+                "foo": "bar,barB"
             },
-            "exclusions" : {
-                "categories" : "test"
+            "exclusions": {
+                "categories": "test"
             }
         },
 
-        "settings" : {
-            "reload" 	: false,
-            "reload_interval":	12000
+        "settings": {
+            "reload": false,
+            "reload_interval": 12000
         }
     };
 </script>
 
 
-
 <!--Define a 728x90 ad slot-->
-<div id="my_ad_1" data-ad-sizes="728x90" data-ad-keyvalues="gkey2=value1,value2" ></div>
+<div id="my_ad_1" data-ad-sizes="728x90" data-ad-keyvalues="gkey2=value1,value2"></div>
 
-<div id="my_ad_2" data-ad-sizes="300x250" data-ad-keyvalues="key1=value2;key2=value2"  ></div> <!-- data-ad-reload-interval="15000" -->
+<div id="my_ad_2" data-ad-sizes="300x250" data-ad-keyvalues="key1=value2;key2=value2"></div>
 
-
-<div id="my_ad_3" ></div>
-
-
+<!-- data-ad-reload-interval="15000" -->
+<div id="my_ad_3"></div>
 
 <script>
-
-
     function tryme() {
         btg.config.DoubleClick.adUnit = "/new_ads_config/";
-        btg.DoubleClick.createAd({size:"300x250"}, "my_ad_3"); /// adUnit: "/new_ad/" ,
+        btg.DoubleClick.createAd({size: "300x250"}, "my_ad_3"); /// adUnit: "/new_ad/" ,
 
     }
-
 </script>
-
-
 
 <button onclick="btg.DoubleClick.refresh();">Refresh Ads</button>
 <br>
@@ -96,10 +73,7 @@
 <br><br>
 <button id="mybutt" onclick="tryme()">Create New Ad</button>
 
-
 <script>
-
-
 
 </script>
 
