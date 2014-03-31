@@ -43,7 +43,7 @@
                 "foo": "bar,barB"
             },
             "exclusions": {
-                "categories": "test"
+                "exclusion-categories": "test1,test2,klim_test"
             }
         },
 
@@ -56,11 +56,14 @@
 
 
 <!--Define a 728x90 ad slot-->
-<div id="my_ad_1" data-ad-sizes="728x90" data-ad-keyvalues="gkey2=value1,value2"></div>
+<div id="my_ad_1" data-ad-sizes="728x90" data-ad-keyvalues="gkey2=value1,value2"><br></div>
 
-<div id="my_ad_2" data-ad-sizes="300x250" data-ad-keyvalues="key1=value2;key2=value2"></div>
+<div id="my_ad_1" data-ad-sizes="728x90" data-ad-keyvalues="gkey2=value1,value2" data-ad-reload-interval="15000"><br></div>
+
+<div id="my_ad_2" data-ad-sizes="300x250" data-ad-keyvalues="key1=value2;key2=value2"><br></div>
 
 <!-- data-ad-reload-interval="15000" -->
+
 <div id="my_ad_3"></div>
 
 <script>
