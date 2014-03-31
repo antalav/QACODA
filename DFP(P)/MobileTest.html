@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DFP Test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+
+<!--<script src="http://btg.mtvnservices.com/aria/coda.html?site=jokes.cc.com&Ads_DFP=1&Ads=0&stage=1"></script>-->
+
+<!--<script src="D:\Git\QACODA\DFP(P)\coda.html"></script>-->
+
+<script src="http://btg.mtvnservices.com/aria/coda.html?site=jokes.com&Ads_DFP=1&Ads=0"></script>
+
+<script>
+    //Toggle auto-firing of ads, ensuring namespaces have been defined without overwriting them.
+    if (typeof MTVN == "undefined") MTVN = {};
+    if (typeof MTVN.config == "undefined") MTVN.config = {};
+    if (typeof MTVN.config.btg == "undefined") MTVN.config.btg = {};
+    if (typeof MTVN.config.btg.DoubleClick == "undefined") MTVN.config.btg.DoubleClick = {};
+
+    MTVN.config.btg.DoubleClick.auto = true;
+
+    btg.config.DoubleClick.onDemand = true;
+
+    //btg.config.DoubleClick.auto = true;
+
+    //Define page data
+    var vmn_page_data = {
+        "metadata": {
+            "property": "nick",
+            "is_main": false
+        },
+        "mappings": {
+            "ad-unit": {
+                "1": "@property",
+                "2": "shows",
+                "3": "victorious",
+                "4": "home"
+            },
+            "key-values": {
+                "foo": "bar,barB"
+            },
+            "exclusions": {
+                "categories": "test"
+            }
+        },
+
+        "settings": {
+            "reload": false,
+            "reload_interval": 300
+        }
+    };
+</script>
+
+
+<!--Define a 728x90 ad slot-->
+<div id="my_ad_1" data-ad-sizes="728x90" data-ad-keyvalues="gkey2=value1,value2"></div>
+
+<div id="my_ad_2" data-ad-sizes="300x250" data-ad-keyvalues="key1=value2;key2=value2"></div>
+
+<!-- data-ad-reload-interval="15000" -->
+<div id="my_ad_3"></div>
+
+<script>
+    function tryme() {
+        btg.config.DoubleClick.adUnit = "/new_ads_config/";
+        btg.DoubleClick.createAd({size: "300x250"}, "my_ad_3"); /// adUnit: "/new_ad/" ,
+
+    }
+</script>
+
+<script>
+    function set_data(){
+        vmn_page_data.mappings.exclusions.categories = "test_klim";
+    }
+</script>
+
+<button onclick="btg.DoubleClick.refresh();">Refresh Ads</button>
+<br>
+<br>
+<button onclick="btg.DoubleClick.refresh('my_ad_1');">Refresh first ad</button>
+<br><br>
+<button id="mybutt" onclick="tryme()">Create New Ad</button>
+<br>
+<br>
+<button id="set_data" onclick="set_data()">set data!</button>
+
+<script>
+
+</script>
+
+</body>
+</html>
