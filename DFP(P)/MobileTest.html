@@ -42,10 +42,8 @@
             "key-values": {
                 "foo": "bar,barB"
             },
-            "exclusions": {
-                "exclusion-categories": "test1,test2,klim_test"
-            }
-        },
+            "exclusion-categories": "test1,test2,klim_test"
+         },
 
         "settings": {
             "reload": false,
@@ -74,7 +72,7 @@
 <!-- Adding some changes to vmn_page_data object -->
 <script>
     function set_data(){
-        vmn_page_data.mappings.exclusions.exclusion-categories = "test_klim";
+        vmn_page_data.mappings.exclusion-categories = "test_klim";
         vmn_page_data.settings.reload = true;
         vmn_page_data.settings.reload_interval = 300;
     }
