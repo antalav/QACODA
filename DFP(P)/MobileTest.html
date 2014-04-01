@@ -7,10 +7,6 @@
 
 <body>
 
-<!--<script src="http://btg.mtvnservices.com/aria/coda.html?site=jokes.cc.com&Ads_DFP=1&Ads=0&stage=1"></script>-->
-
-<!--<script src="D:\Git\QACODA\DFP(P)\coda.html"></script>-->
-
 <script src="http://btg.mtvnservices.com/aria/coda.html?site=jokes.com&Ads_DFP=1&Ads=0"></script>
 
 <script>
@@ -72,7 +68,8 @@
 <!-- Adding some changes to vmn_page_data object -->
 <script>
     function set_data(){
-        vmn_page_data.mappings.exclusion-categories = "test_klim";
+//        TODO: Investigate the line below as it seems that browser throws an error on processing this page
+//        vmn_page_data.mappings.exclusion-categories = "test_klim";
         vmn_page_data.settings.reload = true;
         vmn_page_data.settings.reload_interval = 300;
     }
